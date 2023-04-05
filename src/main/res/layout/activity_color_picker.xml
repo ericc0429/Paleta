@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="top" >
+
+    <!-- Top section containing back button, screen name, and delete color button -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+
+        <!-- Back button -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/BackToPaletteEditor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:gravity="center"
+            android:drawableStart="@drawable/ic_baseline_arrow_back_ios_24"
+            android:drawableTint="#181818"
+            android:paddingHorizontal="10dp"
+            android:background="@null"
+            style="@style/Widget.AppCompat.Button.Small" />
+
+        <!-- Color -->
+        <TextView
+            android:id="@+id/Color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:textSize="24sp"
+            android:textColor="#181818"
+            android:text="Color Picker" />
+
+        <!-- Delete Color button -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/DeleteColor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:gravity="center"
+            android:drawableEnd="@drawable/ic_baseline_delete_24"
+            android:drawableTint="#181818"
+            android:paddingHorizontal="10dp"
+            android:background="@null"
+            style="@style/Widget.AppCompat.Button.Small" />
+    </LinearLayout>
+
+    <!-- Button to add color to favorites -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/AddToFavorites"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:background="@null"
+        android:text="Add to favorites"
+        android:textAllCaps="false"
+        android:paddingHorizontal="10dp"
+        android:drawableStart="@drawable/ic_baseline_favorite_border_24"
+        android:drawablePadding="5dp" />
+
+    <!-- Color Picking API -->
+    <top.defaults.colorpicker.ColorPickerView
+        android:id="@+id/colorPicker"
+        android:layout_width="match_parent"
+        android:layout_height="462dp"
+        app:enableAlpha="true"
+        app:enableBrightness="true"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- TextView of descriptive color name -->
+    <!--
+    <TextView
+        android:id="@+id/DescriptiveColorName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginVertical="5dp"
+        android:textSize="20sp"
+        android:textColor="#181818"
+        android:textStyle="bold"
+        android:text="Descriptive Color Name" />
+        -->
+
+    <!-- Favorite Colors -->
+    <TextView
+        android:id="@+id/FavoriteColors"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginVertical="5dp"
+        android:textSize="20sp"
+        android:textColor="#181818"
+        android:text="Favorites" />
+
+    <!-- Favorite colors - first row -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginBottom="5dp"
+        android:gravity="start" >
+
+        <!-- Favorite Color 1 -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/FavColor1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#FFFFFF"/>
+
+        <!-- Favorite Color 2 -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/FavColor2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginHorizontal="3dp"
+            android:background="#FFFFFF" />
+
+        <!-- Favorite Color 3 -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/FavColor3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#FFFFFF"/>
+
+        <!-- Favorite Color 4 -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/FavColor4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginHorizontal="3dp"
+            android:background="#FFFFFF"/>
+
+        <!-- Favorite Color 5 -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/FavColor5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#FFFFFF"/>
+
+        <!-- Favorite Color 6 -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/FavColor6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginHorizontal="3dp"
+            android:background="#FFFFFF"/>
+
+        <!-- Favorite Color 7 -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/FavColor7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#FFFFFF"/>
+    </LinearLayout>
+
+    <!-- Favorite colors - second row -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginBottom="5dp"
+        android:gravity="start" >
+
+        <!-- Favorite Color 8 -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/FavColor8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#FFFFFF"/>
+
+        <!-- Favorite Color 9 -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/FavColor9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginHorizontal="3dp"
+            android:background="#FFFFFF" />
+
+        <!-- Favorite Color 10 -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/FavColor10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#FFFFFF"/>
+
+        <!-- Favorite Color 11 -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/FavColor11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginHorizontal="3dp"
+            android:background="#FFFFFF"/>
+
+        <!-- Favorite Color 12 -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/FavColor12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#FFFFFF"/>
+
+        <!-- Favorite Color 13 -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/FavColor13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginHorizontal="3dp"
+            android:background="#FFFFFF"/>
+
+        <!-- Favorite Color 14 -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/FavColor14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#FFFFFF"/>
+    </LinearLayout>
+
+</LinearLayout>

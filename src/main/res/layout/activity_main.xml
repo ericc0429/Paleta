@@ -1,0 +1,488 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/LL"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id = "@id/title"
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="Paléta"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <!--    <com.google.android.material.tabs.TabLayout-->  //tab layout
+    <!--        android:id = "@+id/tab"-->
+    <!--        android:layout_below = "@id/title"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        app:tabIconTint="#000000"-->
+    <!--        app:tabIndicatorColor="#000000"-->
+    <!--        app:tabTextColor="#000000">-->
+
+    <!--        <com.google.android.material.tabs.TabItem-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:text="Palettes" />-->
+
+    <!--        <com.google.android.material.tabs.TabItem-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:text="Favorites" />-->
+
+    <!--    </com.google.android.material.tabs.TabLayout>-->
+
+    <!--    <LinearLayout-->  //tab alternative -- just buttons
+    <!--        android:layout_width="fill_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:orientation="horizontal">-->
+
+    <!--    <Button-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_weight="1"-->
+    <!--        android:text="Palettes"-->
+    <!--        android:textColor="@color/black"-->
+    <!--        app:backgroundTint="@color/white" />-->
+
+    <!--    <Button-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_weight="1"-->
+    <!--        android:text="Favorites"-->
+    <!--        android:textColor="@color/black"-->
+    <!--        app:backgroundTint="@color/white" />-->
+
+    <!--    </LinearLayout>-->
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_below="@+id/title"
+        android:layout_width="wrap_content"
+        android:paddingBottom="0dp"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/LL_A"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="vertical">
+
+            <Button
+                android:id = "@+id/p1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:gravity="left|center_vertical"
+                android:text="Palette 1"
+                android:textColor="@color/black"
+                app:backgroundTint="@color/white" />
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/LL_B"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id = "@+id/p1c1"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="#FFFFFF"
+                        android:gravity="center" />
+
+                    <ImageView
+                        android:id = "@+id/p1c2"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="#FFFFFF"
+                        android:gravity="center" />
+
+                    <ImageView
+                        android:id = "@+id/p1c3"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="#FFFFFF"
+                        android:gravity="center" />
+
+                    <ImageView
+                        android:id = "@+id/p1c4"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="#FFFFFF"
+                        android:gravity="center" />
+
+                    <ImageView
+                        android:id = "@+id/p1c5"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="#FFFFFF"
+                        android:gravity="center" />
+
+                    <ImageView
+                        android:id = "@+id/p1c6"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="#FFFFFF"
+                        android:gravity="center" />
+
+                    <ImageView
+                        android:id = "@+id/p1c7"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="#FFFFFF"
+                        android:gravity="center" />
+
+                    <ImageView
+                        android:id = "@+id/p1c8"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="#FFFFFF"
+                        android:gravity="center" />
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+            <Button
+                android:id = "@+id/p2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:gravity="left|center_vertical"
+                android:text="Palette 2"
+                android:textColor="@color/black"
+                app:backgroundTint="@color/white"/>
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <LinearLayout
+                    android:id="@+id/LL_C"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id = "@+id/p2c1"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="#FFFFFF"
+                        android:gravity="center" />
+
+                    <ImageView
+                        android:id = "@+id/p2c2"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="#FFFFFF"
+                        android:gravity="center" />
+
+                    <ImageView
+                        android:id = "@+id/p2c3"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="#FFFFFF"
+                        android:gravity="center" />
+
+                    <ImageView
+                        android:id = "@+id/p2c4"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="#FFFFFF"
+                        android:gravity="center" />
+
+                    <ImageView
+                        android:id = "@+id/p2c5"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="#FFFFFF"
+                        android:gravity="center" />
+
+                    <ImageView
+                        android:id = "@+id/p2c6"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="#FFFFFF"
+                        android:gravity="center" />
+
+                    <ImageView
+                        android:id = "@+id/p2c7"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="#FFFFFF"
+                        android:gravity="center" />
+
+                    <ImageView
+                        android:id = "@+id/p2c8"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="#FFFFFF"
+                        android:gravity="center" />
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+            <Button
+                android:id = "@+id/p3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:gravity="left|center_vertical"
+                android:text="Palette 3"
+                android:textColor="@color/black"
+                app:backgroundTint="@color/white"/>
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <LinearLayout
+                    android:id="@+id/LL_D"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id = "@+id/p3c1"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="#FFFFFF"
+                        android:gravity="center" />
+
+                    <ImageView
+                        android:id = "@+id/p3c2"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="#FFFFFF"
+                        android:gravity="center" />
+
+                    <ImageView
+                        android:id = "@+id/p3c3"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="#FFFFFF"
+                        android:gravity="center" />
+
+                    <ImageView
+                        android:id = "@+id/p3c4"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="#FFFFFF"
+                        android:gravity="center" />
+
+                    <ImageView
+                        android:id = "@+id/p3c5"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="#FFFFFF"
+                        android:gravity="center" />
+
+                    <ImageView
+                        android:id = "@+id/p3c6"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="#FFFFFF"
+                        android:gravity="center" />
+
+                    <ImageView
+                        android:id = "@+id/p3c7"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="#FFFFFF"
+                        android:gravity="center" />
+
+                    <ImageView
+                        android:id = "@+id/p3c8"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="#FFFFFF"
+                        android:gravity="center" />
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+            <Button
+                android:id = "@+id/p4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:gravity="left|center_vertical"
+                android:text="Palette 4"
+                android:textColor="@color/black"
+                app:backgroundTint="@color/white"/>
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/LL_E"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id = "@+id/p4c1"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="#FFFFFF"
+                        android:gravity="center" />
+
+                    <ImageView
+                        android:id = "@+id/p4c2"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="#FFFFFF"
+                        android:gravity="center" />
+
+                    <ImageView
+                        android:id = "@+id/p4c3"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="#FFFFFF"
+                        android:gravity="center" />
+
+                    <ImageView
+                        android:id = "@+id/p4c4"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="#FFFFFF"
+                        android:gravity="center" />
+
+                    <ImageView
+                        android:id = "@+id/p4c5"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="#FFFFFF"
+                        android:gravity="center" />
+
+                    <ImageView
+                        android:id = "@+id/p4c6"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="#FFFFFF"
+                        android:gravity="center" />
+
+                    <ImageView
+                        android:id = "@+id/p4c7"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="#FFFFFF"
+                        android:gravity="center" />
+
+                    <ImageView
+                        android:id = "@+id/p4c8"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="#FFFFFF"
+                        android:gravity="center" />
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+            <Button
+                android:id = "@+id/p5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:gravity="left|center_vertical"
+                android:text="Palette 5"
+                android:textColor="@color/black"
+                app:backgroundTint="@color/white"/>
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/LL_F"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id = "@+id/p5c1"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="#FFFFFF"
+                        android:gravity="center" />
+
+                    <ImageView
+                        android:id = "@+id/p5c2"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="#FFFFFF"
+                        android:gravity="center" />
+
+                    <ImageView
+                        android:id = "@+id/p5c3"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="#FFFFFF"
+                        android:gravity="center" />
+
+                    <ImageView
+                        android:id = "@+id/p5c4"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="#FFFFFF"
+                        android:gravity="center" />
+
+                    <ImageView
+                        android:id = "@+id/p5c5"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="#FFFFFF"
+                        android:gravity="center" />
+
+                    <ImageView
+                        android:id = "@+id/p5c6"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="#FFFFFF"
+                        android:gravity="center" />
+
+                    <ImageView
+                        android:id = "@+id/p5c7"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="#FFFFFF"
+                        android:gravity="center" />
+
+                    <ImageView
+                        android:id = "@+id/p5c8"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="#FFFFFF"
+                        android:gravity="center" />
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <Button
+        android:id="@+id/bCP"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center_vertical|center_horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_marginHorizontal="30dp"
+        android:text="Create Palette"
+        app:backgroundTint="#686666" />
+
+</RelativeLayout>

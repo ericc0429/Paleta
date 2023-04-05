@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.paleta">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Paleta">
+        <activity android:name=".ColorPicker">
+
+        </activity>
+        <activity android:name=".AccessibilityActivity"></activity>
+        <activity android:name=".GalleryOrCameraActivity" />
+        <activity android:name=".AddColor" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ReviewPictureActivity" />
+        <activity android:name=".PaletteEditorActivity" >
+        </activity>
+    </application>
+
+</manifest>

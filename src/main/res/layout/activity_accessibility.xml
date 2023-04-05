@@ -1,0 +1,578 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="top" >
+
+    <!-- Top section containing back button and screen name -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginVertical="10dp">
+
+        <!-- Back button -->
+        <ImageButton
+            android:id="@+id/ExitAccessibility"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="10dp"
+            android:paddingHorizontal="10dp"
+            android:background="@null"
+            app:srcCompat="@drawable/ic_baseline_arrow_back_ios_24" />
+
+        <!-- Color -->
+        <TextView
+            android:id="@+id/AccessibilityScreen"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_marginEnd="50dp"
+            android:textSize="24sp"
+            android:textColor="#181818"
+            android:text="Accessibility Tools" />
+    </LinearLayout>
+
+    <!-- Vertical scroll container with the contrast checker and CB filters -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <!-- Contrast Checker -->
+            <TextView
+                android:id="@+id/ContrastCheckerLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:gravity="left"
+                android:textSize="24sp"
+                android:textColor="#181818"
+                android:text="Contrast Checker" />
+
+            <!-- Contrast Checker Tool -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginVertical="10dp"
+                android:layout_marginHorizontal="10dp">
+
+                <!-- Contrast Color 1 -->
+                <ImageButton
+                    android:id="@+id/ContrastColor1"
+                    android:layout_width="25dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    app:srcCompat="?attr/selectableItemBackground" />
+
+                <!-- Contrast Color 2 -->
+                <ImageButton
+                    android:id="@+id/ContrastColor2"
+                    android:layout_width="25dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    app:srcCompat="?attr/selectableItemBackground" />
+
+                <!-- Contrast Ratio -->
+                <TextView
+                    android:id="@+id/ContrastLabel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:textSize="24sp"
+                    android:textColor="#181818"
+                    android:text="#:#" />
+            </LinearLayout>
+
+            <!-- Original Palette -->
+            <!-- Color Palette - first row-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_marginHorizontal="10dp" >
+
+                <!-- Color 1 -->
+                <ImageButton
+                    android:id="@+id/Color1"
+                    android:layout_width="25dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    app:srcCompat="?attr/selectableItemBackground" />
+
+                <!-- Color 2 -->
+                <ImageButton
+                    android:id="@+id/Color2"
+                    android:layout_width="25dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    app:srcCompat="?attr/selectableItemBackground" />
+
+                <!-- Color 3 -->
+                <ImageButton
+                    android:id="@+id/Color3"
+                    android:layout_width="25dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    app:srcCompat="?attr/selectableItemBackground" />
+
+                <!-- Color 4 -->
+                <ImageButton
+                    android:id="@+id/Color4"
+                    android:layout_width="25dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    app:srcCompat="?attr/selectableItemBackground" />
+            </LinearLayout>
+
+            <!-- Color Palette - second row -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp">
+
+                <!-- Color 5 -->
+                <ImageButton
+                    android:id="@+id/Color5"
+                    android:layout_width="25dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    app:srcCompat="?attr/selectableItemBackground" />
+
+                <!-- Color 6 -->
+                <ImageButton
+                    android:id="@+id/Color6"
+                    android:layout_width="25dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    app:srcCompat="?attr/selectableItemBackground" />
+
+                <!-- Color 7 -->
+                <ImageButton
+                    android:id="@+id/Color7"
+                    android:layout_width="25dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    app:srcCompat="?attr/selectableItemBackground" />
+
+                <!-- Color 8 -->
+                <ImageButton
+                    android:id="@+id/Color8"
+                    android:layout_width="25dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    app:srcCompat="?attr/selectableItemBackground" />
+            </LinearLayout>
+
+            <!-- Complete Colorblindness -->
+            <TextView
+                android:id="@+id/CBFilter1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:gravity="left"
+                android:textSize="24sp"
+                android:textColor="#181818"
+                android:text="Complete Color Blindness" />
+
+            <!-- Palette through Filter 1-->
+            <!-- Color Palette - first row-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_marginHorizontal="10dp" >
+
+                <!-- Color 1 -->
+                <ImageButton
+                    android:id="@+id/Color1CB1"
+                    android:layout_width="25dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    app:srcCompat="?attr/selectableItemBackground" />
+
+                <!-- Color 2 -->
+                <ImageButton
+                    android:id="@+id/Color2CB1"
+                    android:layout_width="25dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    app:srcCompat="?attr/selectableItemBackground" />
+
+                <!-- Color 3 -->
+                <ImageButton
+                    android:id="@+id/Color3CB1"
+                    android:layout_width="25dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    app:srcCompat="?attr/selectableItemBackground" />
+
+                <!-- Color 4 -->
+                <ImageButton
+                    android:id="@+id/Color4CB1"
+                    android:layout_width="25dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    app:srcCompat="?attr/selectableItemBackground" />
+            </LinearLayout>
+
+            <!-- Color Palette - second row -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp">
+
+                <!-- Color 5 -->
+                <ImageButton
+                    android:id="@+id/Color5CB1"
+                    android:layout_width="25dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    app:srcCompat="?attr/selectableItemBackground" />
+
+                <!-- Color 6 -->
+                <ImageButton
+                    android:id="@+id/Color6CB1"
+                    android:layout_width="25dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    app:srcCompat="?attr/selectableItemBackground" />
+
+                <!-- Color 7 -->
+                <ImageButton
+                    android:id="@+id/Color7CB1"
+                    android:layout_width="25dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    app:srcCompat="?attr/selectableItemBackground" />
+
+                <!-- Color 8 -->
+                <ImageButton
+                    android:id="@+id/Color8CB1"
+                    android:layout_width="25dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    app:srcCompat="?attr/selectableItemBackground" />
+            </LinearLayout>
+
+            <!-- Deuteranopia -->
+            <TextView
+                android:id="@+id/CBFilter2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:gravity="left"
+                android:textSize="24sp"
+                android:textColor="#181818"
+                android:text="Deuteranopia" />
+
+            <!-- Palette through Filter 2-->
+            <!-- Color Palette - first row-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_marginHorizontal="10dp" >
+
+                <!-- Color 1 -->
+                <ImageButton
+                    android:id="@+id/Color1CB2"
+                    android:layout_width="25dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="#DBD9FC"
+                    app:srcCompat="?attr/selectableItemBackground" />
+
+                <!-- Color 2 -->
+                <ImageButton
+                    android:id="@+id/Color2CB2"
+                    android:layout_width="25dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="#E8BC74"
+                    app:srcCompat="?attr/selectableItemBackground" />
+
+                <!-- Color 3 -->
+                <ImageButton
+                    android:id="@+id/Color3CB2"
+                    android:layout_width="25dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="#846D51"
+                    app:srcCompat="?attr/selectableItemBackground" />
+
+                <!-- Color 4 -->
+                <ImageButton
+                    android:id="@+id/Color4CB2"
+                    android:layout_width="25dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="#5A586A"
+                    app:srcCompat="?attr/selectableItemBackground" />
+            </LinearLayout>
+
+            <!-- Color Palette - second row -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp">
+
+                <!-- Color 5 -->
+                <ImageButton
+                    android:id="@+id/Color5CB2"
+                    android:layout_width="25dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="#BEA69D"
+                    app:srcCompat="?attr/selectableItemBackground" />
+
+                <!-- Color 6 -->
+                <ImageButton
+                    android:id="@+id/Color6CB2"
+                    android:layout_width="25dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    app:srcCompat="?attr/selectableItemBackground" />
+
+                <!-- Color 7 -->
+                <ImageButton
+                    android:id="@+id/Color7CB2"
+                    android:layout_width="25dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    app:srcCompat="?attr/selectableItemBackground" />
+
+                <!-- Color 8 -->
+                <ImageButton
+                    android:id="@+id/Color8CB2"
+                    android:layout_width="25dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    app:srcCompat="?attr/selectableItemBackground" />
+            </LinearLayout>
+
+            <!-- Protanopia -->
+            <TextView
+                android:id="@+id/CBFilter3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:gravity="left"
+                android:textSize="24sp"
+                android:textColor="#181818"
+                android:text="Protanopia" />
+
+            <!-- Palette through Filter 2-->
+            <!-- Color Palette - first row-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_marginHorizontal="10dp" >
+
+                <!-- Color 1 -->
+                <ImageButton
+                    android:id="@+id/Color1CB3"
+                    android:layout_width="25dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="#DBDBEE"
+                    app:srcCompat="?attr/selectableItemBackground" />
+
+                <!-- Color 2 -->
+                <ImageButton
+                    android:id="@+id/Color2CB3"
+                    android:layout_width="25dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="#D3C477"
+                    app:srcCompat="?attr/selectableItemBackground" />
+
+                <!-- Color 3 -->
+                <ImageButton
+                    android:id="@+id/Color3CB3"
+                    android:layout_width="25dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="#727075"
+                    app:srcCompat="?attr/selectableItemBackground" />
+
+                <!-- Color 4 -->
+                <ImageButton
+                    android:id="@+id/Color4CB3"
+                    android:layout_width="25dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="#595A63"
+                    app:srcCompat="?attr/selectableItemBackground" />
+            </LinearLayout>
+
+            <!-- Color Palette - second row -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp">
+
+                <!-- Color 5 -->
+                <ImageButton
+                    android:id="@+id/Color5CB3"
+                    android:layout_width="25dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="#B4AB94"
+                    app:srcCompat="?attr/selectableItemBackground" />
+
+                <!-- Color 6 -->
+                <ImageButton
+                    android:id="@+id/Color6CB3"
+                    android:layout_width="25dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    app:srcCompat="?attr/selectableItemBackground" />
+
+                <!-- Color 7 -->
+                <ImageButton
+                    android:id="@+id/Color7CB3"
+                    android:layout_width="25dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    app:srcCompat="?attr/selectableItemBackground" />
+
+                <!-- Color 8 -->
+                <ImageButton
+                    android:id="@+id/Color8CB3"
+                    android:layout_width="25dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    app:srcCompat="?attr/selectableItemBackground" />
+            </LinearLayout>
+
+            <!-- Tritanopia -->
+            <TextView
+                android:id="@+id/CBFilter4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:gravity="left"
+                android:textSize="24sp"
+                android:textColor="#181818"
+                android:text="Tritanopia" />
+
+            <!-- Palette through Filter 2-->
+            <!-- Color Palette - first row-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_marginHorizontal="10dp" >
+
+                <!-- Color 1 -->
+                <ImageButton
+                    android:id="@+id/Color1CB4"
+                    android:layout_width="25dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="#93ECFC"
+                    app:srcCompat="?attr/selectableItemBackground" />
+
+                <!-- Color 2 -->
+                <ImageButton
+                    android:id="@+id/Color2CB4"
+                    android:layout_width="25dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="#F3B2BC"
+                    app:srcCompat="?attr/selectableItemBackground" />
+
+                <!-- Color 3 -->
+                <ImageButton
+                    android:id="@+id/Color3CB4"
+                    android:layout_width="25dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="#C3423D"
+                    app:srcCompat="?attr/selectableItemBackground" />
+
+                <!-- Color 4 -->
+                <ImageButton
+                    android:id="@+id/Color4CB4"
+                    android:layout_width="25dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="#445F67"
+                    app:srcCompat="?attr/selectableItemBackground" />
+            </LinearLayout>
+
+            <!-- Color Palette - second row -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp">
+
+                <!-- Color 5 -->
+                <ImageButton
+                    android:id="@+id/Color5CB4"
+                    android:layout_width="25dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="#96B0BD"
+                    app:srcCompat="?attr/selectableItemBackground" />
+
+                <!-- Color 6 -->
+                <ImageButton
+                    android:id="@+id/Color6CB4"
+                    android:layout_width="25dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    app:srcCompat="?attr/selectableItemBackground" />
+
+                <!-- Color 7 -->
+                <ImageButton
+                    android:id="@+id/Color7CB4"
+                    android:layout_width="25dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    app:srcCompat="?attr/selectableItemBackground" />
+
+                <!-- Color 8 -->
+                <ImageButton
+                    android:id="@+id/Color8CB4"
+                    android:layout_width="25dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    app:srcCompat="?attr/selectableItemBackground" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
